@@ -1,0 +1,6 @@
+endpoints:
+      blacklist: "/blacklist"
+
+wiremock:
+      port: 9000
+      host: "http://localhost:"

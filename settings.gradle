@@ -1,0 +1,4 @@
+rootProject.name = 'SecurityVerification'
+include 'security-service'
+include 'servi ce'
+
