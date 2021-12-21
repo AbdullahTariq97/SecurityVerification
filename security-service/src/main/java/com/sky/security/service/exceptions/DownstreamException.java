@@ -1,4 +1,4 @@
-package com.sky.security.service.Exceptions;
+package com.sky.security.service.exceptions;
 
 public class DownstreamException extends RuntimeException {
 

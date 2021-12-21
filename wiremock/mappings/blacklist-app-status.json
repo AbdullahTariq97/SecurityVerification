@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/blacklist"
+  },
+  "response": {
+    "status": 200,
+    "body": "{\n  \"murderers\": [\n    {\n      \"firstName\": \"Jack\",\n      \"lastName\": \"Ripper\",\n      \"age\": 43,\n      \"crimes\": [\n        {\n          \"date\": \"1884-07-13\",\n          \"typeOfCrime\": \"MURDER\"\n        },\n        {\n          \"date\": \"1885-08-14\",\n          \"typeOfCrime\": \"MURDER\"\n        }\n      ]\n    },\n    {\n      \"firstName\": \"Dennis\",\n      \"lastName\": \"Nilsen\",\n      \"age\": 50,\n      \"crimes\": [\n        {\n          \"date\": \"1984-04-07\",\n          \"typeOfCrime\": \"MURDER\"\n        },\n        {\n          \"date\": \"2003-02-07\",\n          \"typeOfCrime\": \"BURGLARY\"\n        }\n      ]\n    }\n  ],\n  \"terrorists\": [\n    {\n      \"firstName\": \"Berton\",\n      \"lastName\": \"Harrison\",\n      \"age\": 31,\n      \"crimes\": [\n        {\n          \"date\": \"2019-03-15\",\n          \"typeOfCrime\": \"TERRORISM\"\n        }\n      ]\n    },\n    {\n      \"firstName\": \"Osama\",\n      \"lastName\": \"Ladin\",\n      \"age\": 70,\n      \"crimes\": [\n        {\n          \"date\": \"2001-09-11\",\n          \"typeOfCrime\": \"TERRORISM\"\n        }\n      ]\n    }\n  ]\n}",
+    "headers": {
+      "Content-Type": "text/plain"
+    }
+  }
+}

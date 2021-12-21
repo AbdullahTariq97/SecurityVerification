@@ -1,26 +1,26 @@
-package com.sky.security.service.Exceptions;
+package com.sky.security.service.exceptions;
 
 public class ErrorDto {
 
-    private int statusCode;
+    private int downstreamStatusCode;
     private String errorCode;
     private String message;
 
     public ErrorDto() {
     }
 
-    public ErrorDto(int statusCode, String errorCode, String message) {
-        this.statusCode = statusCode;
+    public ErrorDto(int downstreamStatusCode, String errorCode, String message) {
+        this.downstreamStatusCode = downstreamStatusCode;
         this.errorCode = errorCode;
         this.message = message;
     }
 
-    public int getStatusCode() {
-        return statusCode;
+    public int getDownstreamStatusCode() {
+        return downstreamStatusCode;
     }
 
-    public void setStatusCode(int statusCode) {
-        this.statusCode = statusCode;
+    public void setDownstreamStatusCode(int downstreamStatusCode) {
+        this.downstreamStatusCode = downstreamStatusCode;
     }
 
     public String getErrorCode() {

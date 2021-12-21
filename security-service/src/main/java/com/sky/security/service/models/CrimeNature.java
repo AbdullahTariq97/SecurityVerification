@@ -1,4 +1,4 @@
-package com.sky.security.service.Models;
+package com.sky.security.service.models;
 
 public enum CrimeNature {
     MURDER,

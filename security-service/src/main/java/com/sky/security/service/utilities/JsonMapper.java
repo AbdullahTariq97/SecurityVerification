@@ -1,4 +1,4 @@
-package com.sky.security.service.Utilities;
+package com.sky.security.service.utilities;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
