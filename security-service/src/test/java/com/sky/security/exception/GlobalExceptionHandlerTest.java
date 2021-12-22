@@ -1,4 +1,4 @@
-package com.sky.security;
+package com.sky.security.exception;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sky.security.service.controllers.VerificationController;
@@ -23,6 +23,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @ExtendWith(MockitoExtension.class)
@@ -61,7 +62,7 @@ public class GlobalExceptionHandlerTest {
         Person person = Person.builder().age(26).firstName("Mother").lastName("Terresa").nationalInsuranceNumber(678910).build();
         ObjectMapper objectMapper = new ObjectMapper();
         String personJson = objectMapper.writeValueAsString(person);
-        mockMvc.perform(get("/verify").contentType(MediaType.APPLICATION_JSON).content(personJson))
+        mockMvc.perform(post("/verify").contentType(MediaType.APPLICATION_JSON).content(personJson))
                 .andExpect(status().is(500))
                 .andExpect(jsonPath("$.downstreamStatusCode", Matchers.is(downstreamStatusCode)))
                 .andExpect(jsonPath("$.errorCode", Matchers.is("VR101")))
@@ -79,7 +80,7 @@ public class GlobalExceptionHandlerTest {
     @Test
     public void givenVerifyEndpointPolledWithoutUser_shouldReturnAppropriateResponse() throws Exception {
         when(verificationController.verifyIndividual(null)).thenThrow(new IllegalArgumentException("Pass in person information on which to run background checks"));
-        mockMvc.perform(get("/verify"))
+        mockMvc.perform(post("/verify"))
                 .andExpect(status().is(400))
                 .andExpect(content().string("Pass in person information on which to run background checks"));
     }

@@ -2,4 +2,5 @@ rootProject.name = 'SecurityVerification'
 include 'security-service'
 include 'servi ce'
 include 'wiremock'
+include 'functional-tests'
 

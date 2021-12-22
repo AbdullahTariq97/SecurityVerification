@@ -1,0 +1,58 @@
+{
+  "criminals": [
+    {
+      "firstName": "Jack",
+      "lastName": "Ripper",
+      "age": 43,
+      "crimes": [
+        {
+          "date": "1884-07-13",
+          "typeOfCrime": "MURDER"
+        },
+        {
+          "date": "1885-08-14",
+          "typeOfCrime": "MURDER"
+        }
+      ]
+    },
+    {
+      "firstName": "Dennis",
+      "lastName": "Nilsen",
+      "age": 50,
+      "crimes": [
+        {
+          "date": "1984-04-07",
+          "typeOfCrime": "MURDER"
+        },
+        {
+          "date": "2003-02-07",
+          "typeOfCrime": "BURGLARY"
+        }
+      ]
+    }
+  ],
+  "terrorists": [
+    {
+      "firstName": "Berton",
+      "lastName": "Harrison",
+      "age": 31,
+      "crimes": [
+        {
+          "date": "2019-03-15",
+          "typeOfCrime": "TERRORISM"
+        }
+      ]
+    },
+    {
+      "firstName": "Osama",
+      "lastName": "Ladin",
+      "age": 70,
+      "crimes": [
+        {
+          "date": "2001-09-11",
+          "typeOfCrime": "TERRORISM"
+        }
+      ]
+    }
+  ]
+}

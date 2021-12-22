@@ -1,4 +1,4 @@
-package com.sky.security.exception;
+package com.sky.security.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -54,16 +54,16 @@ public class VerificationServiceTest {
 
 
         // When
-        Person person = Person.builder().age(26).firstName("Jack").lastName("Ripper").nationalInsuranceNumber(12345).build();
+        Person person = Person.builder().age(43).firstName("Jack").lastName("Ripper").nationalInsuranceNumber(12345).build();
         Optional<WantedPerson> wantedPersonFromService = verificationService.getCriminalRecord(person);
 
         // Then
         assertThat(wantedPersonFromService.isPresent()).isTrue();
 
-        WantedPerson wantedPerson = WantedPerson.builder().age(26).age(26).firstName("Jack").lastName("Ripper")
+        WantedPerson wantedPerson = WantedPerson.builder().age(43).firstName("Jack").lastName("Ripper")
                 .crimes(List.of(new Crime("1884-07-13", CrimeNature.MURDER.name()),
                         new Crime("1885-08-14", CrimeNature.MURDER.name()))).build();
-        assertThat(wantedPersonFromService).usingRecursiveComparison().isEqualTo(wantedPerson);
+        assertThat(wantedPersonFromService.get()).usingRecursiveComparison().isEqualTo(wantedPerson);
     }
 
     @Test

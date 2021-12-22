@@ -1,0 +1,15 @@
+{
+  "firstName": "Jack",
+  "lastName": "Ripper",
+  "age": 43,
+  "crimes": [
+    {
+      "date": "1884-07-13",
+      "typeOfCrime": "MURDER"
+    },
+    {
+      "date": "1885-08-14",
+      "typeOfCrime": "MURDER"
+    }
+  ]
+}
