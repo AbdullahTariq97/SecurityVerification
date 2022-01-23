@@ -1,13 +1,12 @@
 package com.sky.security.service.controllers;
 
-import com.sky.security.service.models.WantedPerson;
 import com.sky.security.service.models.Person;
+import com.sky.security.service.models.WantedPerson;
 import com.sky.security.service.services.VerificationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,7 +19,7 @@ public class VerificationController {
     private VerificationService verificationService;
 
     // set required to false to draft custom bad request response
-    @PostMapping("/verify")
+    @GetMapping("/verify")
     public ResponseEntity verifyIndividual(@RequestBody(required = false) Person person) {
 
         Person personFromOptional = Optional.ofNullable(person)
