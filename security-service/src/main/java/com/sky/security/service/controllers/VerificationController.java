@@ -4,6 +4,7 @@ import com.sky.security.service.models.WantedPerson;
 import com.sky.security.service.models.Person;
 import com.sky.security.service.services.VerificationService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,6 +28,6 @@ public class VerificationController {
 
         Optional<WantedPerson> wantedPersonRecord = verificationService.getCriminalRecord(personFromOptional);
 
-        return wantedPersonRecord.isPresent() ? ResponseEntity.ok(wantedPersonRecord.get()) : ResponseEntity.status(404).body("No matches found in database");
+        return wantedPersonRecord.isPresent() ? ResponseEntity.ok(wantedPersonRecord.get()) : ResponseEntity.status(HttpStatus.NOT_FOUND).body("No matches found in database");
     }
 }

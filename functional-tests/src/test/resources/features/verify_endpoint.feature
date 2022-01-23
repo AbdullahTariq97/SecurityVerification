@@ -1,5 +1,5 @@
 Feature: should verify person passed in
-  @my-test
+
   Scenario: given downstreams are up, if guilty person passed in, should return wanted persons details
     Given that the downstream "blacklist" is healthy
     When the "/verify" endpoint is polled with request body:

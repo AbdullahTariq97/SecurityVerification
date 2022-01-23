@@ -57,7 +57,7 @@ public class VerificationControllerTest {
         ResponseEntity response = verificationController.verifyIndividual(person);
 
         // Then
-        assertThat(response).extracting("status","body").containsExactly(HttpStatus.OK, "No matches found in database");
+        assertThat(response).extracting("status","body").containsExactly(HttpStatus.NOT_FOUND, "No matches found in database");
 
     }
 

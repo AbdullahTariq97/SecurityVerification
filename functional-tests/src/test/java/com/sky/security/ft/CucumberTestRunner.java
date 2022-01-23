@@ -8,9 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = "html:reports/report.html",
         glue = "com.sky.security.ft",
-        features = "src/test/resources/features",
-        tags = "@my-test"
-        )
+        features = "src/test/resources/features")
 public class CucumberTestRunner {
 
 }
